@@ -172,13 +172,13 @@ function createTodo(value) {
         span.style.borderColor = 'hsl(233, 14%, 35%)';
     }
     iconCheck.setAttribute('alt', 'check icon');
-    iconCheck.setAttribute('src', '../images/icon-check.svg');
+    iconCheck.setAttribute('src', './images/icon-check.svg');
     iconCheck.classList.add('click-check-icon');
     iconCheck.classList.add('check-icon');
     span.append(iconCheck);
 
     iconClose.classList.add('close-icon');
-    iconClose.setAttribute('src', '../images/icon-cross.svg');
+    iconClose.setAttribute('src', './images/icon-cross.svg');
     iconClose.setAttribute('alt', 'close icon');
     iconClose.setAttribute('role', 'button');
     iconClose.setAttribute('tabindex', '0');
@@ -206,17 +206,17 @@ function findLength(){
 
 colorMod.addEventListener('click', function(e){
     if(colorMod.dataset.check == 'true'){
-        colorMod.src = '../images/icon-sun.svg';
+        colorMod.src = './images/icon-sun.svg';
         colorMod.dataset.check = 'false';
         document.querySelector('body').style.backgroundColor = 'hsl(235, 21%, 11%';
         if(window.screen.width > 375){
-            bgImage.style.backgroundImage = "url('../images/bg-desktop-dark.jpg')";
+            bgImage.style.backgroundImage = "url('./images/bg-desktop-dark.jpg')";
         } else{
-            bgImage.style.backgroundImage = "url('../images/bg-mobile-dark.jpg')";
+            bgImage.style.backgroundImage = "url('./images/bg-mobile-dark.jpg')";
         }
         let checkIcon = document.querySelectorAll('.check-icon');
         for (let i = 0; i < checkIcon.length; i++) {
-            checkIcon[i].src = '../images/icon-check-dark.svg';
+            checkIcon[i].src = './images/icon-check-dark.svg';
           }
         let x = document.querySelectorAll('li')
         for (let i = 0; i < x.length; i++) {
@@ -245,17 +245,17 @@ colorMod.addEventListener('click', function(e){
             ele.style.backgroundColor = 'hsl(235, 24%, 19%)';
         })
     } else{
-        colorMod.src = '../images/icon-moon.svg';
+        colorMod.src = './images/icon-moon.svg';
         colorMod.dataset.check = 'true';
         document.querySelector('body').style.backgroundColor = 'hsl(236, 33%, 92%)';
        if(window.screen.width > 375){
-        bgImage.style.backgroundImage = "url('../images/bg-desktop-light.jpg')";
+        bgImage.style.backgroundImage = "url('./images/bg-desktop-light.jpg')";
        } else{
-        bgImage.style.backgroundImage = "url('../images/bg-mobile-light.jpg')";
+        bgImage.style.backgroundImage = "url('./images/bg-mobile-light.jpg')";
        }
        let checkIcon = document.querySelectorAll('.check-icon');
         for (let i = 0; i < checkIcon.length; i++) {
-            checkIcon[i].src = '../images/icon-check.svg';
+            checkIcon[i].src = './images/icon-check.svg';
           }
         let x = document.querySelectorAll('li')
         for (let i = 0; i < x.length; i++) {
@@ -289,12 +289,12 @@ colorMod.addEventListener('click', function(e){
 
 window.addEventListener('resize', function(e){
     if(window.screen.width < 375 && colorMod.dataset.check == 'false'){
-        bgImage.style.backgroundImage = "url('../images/bg-mobile-dark.jpg')";
+        bgImage.style.backgroundImage = "url('./images/bg-mobile-dark.jpg')";
     } else if(window.screen.width < 375 && colorMod.dataset.check == 'true'){
-        bgImage.style.backgroundImage = 'url("../images/bg-mobile-light.jpg")';
+        bgImage.style.backgroundImage = 'url("./images/bg-mobile-light.jpg")';
     } else if(window.screen.width > 375 && colorMod.dataset.check == 'true'){
-        bgImage.style.backgroundImage = 'url("../images/bg-desktop-light.jpg")';
+        bgImage.style.backgroundImage = 'url("./images/bg-desktop-light.jpg")';
     } else if(window.screen.width > 375 && colorMod.dataset.check == 'false'){
-        bgImage.style.backgroundImage = 'url("../images/bg-desktop-dark.jpg")';
+        bgImage.style.backgroundImage = 'url("./images/bg-desktop-dark.jpg")';
     }
 })
