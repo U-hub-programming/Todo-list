@@ -170,9 +170,11 @@ function createTodo(value) {
         li.style.borderColor = 'hsl(234, 11%, 52%)';
         li.style.color = 'hsl(234, 39%, 85%)'
         span.style.borderColor = 'hsl(233, 14%, 35%)';
+        iconCheck.setAttribute('src', './images/icon-check-dark.svg');
+    } else{
+        iconCheck.setAttribute('src', './images/icon-check.svg');
     }
     iconCheck.setAttribute('alt', 'check icon');
-    iconCheck.setAttribute('src', './images/icon-check.svg');
     iconCheck.classList.add('click-check-icon');
     iconCheck.classList.add('check-icon');
     span.append(iconCheck);
